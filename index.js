@@ -6,6 +6,16 @@ import cors from "cors"
 dotenv.config();
 
 const app = express();
+
+app.use(
+    cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+    methods: ['GET', 'POST', 'DELETE', 'OPTIONS'], //not case sensitive
+    allowedHeaders: ['Content-Type', 'Authorization'] //case sensitive
+})
+);
+
 const port = process.env.PORT || 4000;  //good practice either process.env.PORT(3000) or port 4000
 
 app.get("/", (req, res) => {
