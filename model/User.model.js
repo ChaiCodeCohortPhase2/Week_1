@@ -26,8 +26,13 @@ const userSchema = new mongoose.Schema(
 }
 , 
 {
-    timestamps: true,
+    timestamps: true, // it makes the createdAt: NativeDate; updatedAt: NativeDate; automatically
 });
+
+userSchema.pre("save",async function(next){
+
+    next();
+})
 
 const User = mongoose.model("User", userSchema);
 

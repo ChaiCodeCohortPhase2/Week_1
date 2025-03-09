@@ -4,6 +4,9 @@ import dotenv from "dotenv";
 import cors from "cors";
 import db from "./utils/db.js";
 
+// app.use("/") matches all routes starting with
+//  / so if placed before specific routes, it catches requests before they reach userRoutes, overriding them
+
 //import all routes
 import userRoutes from "./routes/user.routes.js"
 
