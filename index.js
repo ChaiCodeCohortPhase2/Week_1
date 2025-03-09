@@ -18,7 +18,7 @@ app.use(
 
 const port = process.env.PORT || 4000;  //good practice either process.env.PORT(3000) or port 4000
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { //request accept ____ '/' route
   res.send('Cohort!');
 }); //it runs on request
 
