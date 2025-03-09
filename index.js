@@ -18,7 +18,7 @@ app.get("/hitesh", (req, res) => {
 
 app.get("/piyush", (request, response) => {
     response.send("Piyush!")
-})
+});
 
 // console.log(process.env.PORT)
 
